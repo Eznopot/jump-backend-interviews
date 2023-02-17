@@ -1,0 +1,7 @@
+# Database credentials
+database:
+  user: "jump"
+  pass: "password"
+  ip: "localhost"
+  port: "5432"
+  name: "jump"
