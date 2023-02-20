@@ -1,12 +1,13 @@
 package main
 
 import (
-	api "jump-backend-interview/src/api"
+	"jump-backend-interview/src/api"
+
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	println("Starting server...");
+	println("Starting server...")
 	router := gin.New()
 	router.SetTrustedProxies(nil)
 	api.InitApi(router)
