@@ -55,7 +55,7 @@ func PostTransaction(c *gin.Context) {
 	code := database.PostTransaction(transaction)
 	if code != 204 {
 		c.JSON(code, gin.H{
-			"message": code,
+			"message": "can't post invoice to database",
 		})
 		return
 	}
