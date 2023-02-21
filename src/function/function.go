@@ -3,6 +3,7 @@ package function
 import (
 	"jump-backend-interview/src/database"
 	"jump-backend-interview/src/model"
+	"log"
 
 	"github.com/gin-gonic/gin"
 )
@@ -22,7 +23,7 @@ func PostInvoice(c *gin.Context) {
 	invoice := model.Invoice{}
 	err := c.Bind(&invoice)
 	if err != nil {
-		println(err.Error())
+		log.Default().Println(err.Error())
 		c.JSON(400, gin.H{
 			"message": "bad arguments",
 		})
@@ -43,7 +44,7 @@ func PostTransaction(c *gin.Context) {
 	transaction := model.Transaction{}
 	err := c.Bind(&transaction)
 	if err != nil {
-		println(err.Error())
+		log.Default().Println(err.Error())
 		c.JSON(501, gin.H{
 			"message": "bad arguments",
 		})

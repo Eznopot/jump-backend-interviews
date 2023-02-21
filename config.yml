@@ -1,7 +1,11 @@
+# Server
+server:
+  ip: "0.0.0.0"
+  port: 8080
 # Database credentials
 database:
   user: "jump"
   pass: "password"
   ip: "localhost"
-  port: "5432"
+  port: 5432
   name: "jump"
