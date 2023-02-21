@@ -1,7 +1,7 @@
 # JUMP BACKEND INTERVIEW
 
 ## Introduction
-Dans le cadre d'un test technique voici un server Go capable de communiquer avec une base de donnée PostgreSQL.
+Dans le cadre d'un entretient technique voici un server Go capable de communiquer avec une base de donnée PostgreSQL.
 
 ## Lancement
 Afin de pouvoir lancer le programme il est nécéssaire d'avoir [Golang](https://go.dev) et [Docker](https://www.docker.com) d'installés.<br>
@@ -12,7 +12,7 @@ Pour installer les dépendances du projet, utilisez la commande:
 go install
 ```
 
-Pour lancé le server utilisez la commande:
+Pour lancer le server utilisez la commande:
 
 ```bash
 go run .
@@ -58,7 +58,7 @@ la routes GET /users n'attend pas d'argument et renvoie en cas de réussite un j
     },
 ]
 ```
-
+Si une erreur se produit, le code 500 est renvoyé. 
 ### POST /invoice
 La route POST /invoice attend en entrée un JSON au format:
 ```json
