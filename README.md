@@ -11,7 +11,7 @@ La librairie [pq](https://github.com/lib/pq) fournit elle les drivers permettant
 La librairie [yaml](https://pkg.go.dev/gopkg.in/yaml.v2@v2.4.0) permet de transformer une "String" contenant des informations sous la form yaml en structure de données.
 
 ## Lancement
-Afin de pouvoir lancer le programme, il est nécessaire d'avoir [Golang](https://go.dev) et [Docker](https://www.docker.com) d'installer.<br>
+Afin de pouvoir lancer le programme, il est nécessaire d'avoir [Golang](https://go.dev) et [Docker](https://www.docker.com) d'installés.<br>
 Il faut aussi que le docker fourni par Jump contenant la base de données PostgreSQL soit lancé.<br>
 Pour installer les dépendances du projet, utilisez la commande:
 
