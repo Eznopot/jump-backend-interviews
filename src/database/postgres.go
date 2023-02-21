@@ -17,8 +17,8 @@ var (
 	instance *sql.DB
 )
 
+// It creates a singleton instance of a database connection
 func GetDb() *sql.DB {
-
 	once.Do(func() {
 		cfg, err := config.GetConfig()
 		if err != nil {

@@ -8,6 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// It gets all the users from the database and returns them in JSON format
 func GetUsers(c *gin.Context) {
 	users, code := database.GetUsers()
 	if code != 200 {
@@ -19,6 +20,7 @@ func GetUsers(c *gin.Context) {
 	c.JSON(code, users)
 }
 
+// It takes a JSON object from the request body, and if it's valid, it adds it to the database
 func PostInvoice(c *gin.Context) {
 	invoice := model.Invoice{}
 	err := c.Bind(&invoice)
@@ -39,7 +41,7 @@ func PostInvoice(c *gin.Context) {
 	c.Data(code, "application/json", nil)
 }
 
-// 404 si pas trouvé, 400 si pas le bon motant, 422 si deja payé 500 si erreur de la base de données, 204 si ok
+// It takes a transaction from the request body, and then adds it to the database
 func PostTransaction(c *gin.Context) {
 	transaction := model.Transaction{}
 	err := c.Bind(&transaction)

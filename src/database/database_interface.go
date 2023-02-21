@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+// We get a database connection, query the database, and return the results
 func GetUsers() (*[]model.User, int) {
 	db := GetDb()
 	rows, err := db.Query("SELECT * FROM users")
@@ -28,6 +29,7 @@ func GetUsers() (*[]model.User, int) {
 	return &users, 200
 }
 
+// It takes an invoice, checks if the user exists, and if so, inserts the invoice into the database
 func PostInvoice(invoice model.Invoice) int {
 	db := GetDb()
 	var result bool
@@ -51,6 +53,8 @@ func PostInvoice(invoice model.Invoice) int {
 	return 204
 }
 
+// It updates the user's balance and the invoice's status if the invoice exists, the invoice is
+// pending, and the amount is correct
 func PostTransaction(transaction model.Transaction) int {
 	db := GetDb()
 	var result bool

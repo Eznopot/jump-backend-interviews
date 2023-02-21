@@ -20,6 +20,7 @@ type Config struct {
 	} `yaml:"database"`
 }
 
+// It opens the config.yml file, decodes it into a Config struct, and returns the struct
 func GetConfig() (*Config, error) {
 	f, err := os.Open("config.yml")
 	if err != nil {
